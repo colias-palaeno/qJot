@@ -7,14 +7,22 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>580</height>
+    <height>567</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">* {
+	border: 0;
+}</string>
+   </property>
    <layout class="QGridLayout" name="gridLayout">
+    <property name="bottomMargin">
+     <number>9</number>
+    </property>
     <item row="0" column="0" rowspan="3">
      <widget class="QScrollArea" name="scrollArea">
       <property name="sizePolicy">
@@ -40,13 +48,12 @@
       </property>
       <property name="styleSheet">
        <string notr="true">QScrollBar:vertical {
-            border: 0;
-            width: 10px;    
+            width: 6px;    
  }
 
 QScrollBar::handle:vertical {      
-          	border: 0;
-			background-color: rgba(47, 47, 47, 122);
+			border-radius: 2px;
+			background-color: rgba(47, 47, 47, 64);
 }
 
 QScrollBar::add-line:vertical {       
@@ -75,10 +82,22 @@ QScrollBar::sub-line:vertical {
          <x>0</x>
          <y>0</y>
          <width>140</width>
-         <height>518</height>
+         <height>527</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout_2">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
         <item>
          <layout class="QVBoxLayout" name="verticalLayout"/>
         </item>
@@ -98,6 +117,9 @@ QScrollBar::sub-line:vertical {
        <font>
         <pointsize>20</pointsize>
        </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
       </property>
       <property name="text">
        <string>New Note</string>
@@ -137,7 +159,7 @@ QScrollBar::sub-line:vertical {
    <widget class="QMenu" name="menuNotes">
     <property name="geometry">
      <rect>
-      <x>297</x>
+      <x>345</x>
       <y>100</y>
       <width>136</width>
       <height>100</height>
@@ -151,7 +173,6 @@ QScrollBar::sub-line:vertical {
    </widget>
    <addaction name="menuNotes"/>
   </widget>
-  <widget class="QStatusBar" name="statusBar"/>
   <action name="actionSave">
    <property name="text">
     <string>Save</string>

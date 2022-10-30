@@ -85,6 +85,7 @@ MainWindow::MainWindow(QWidget* parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    ui->verticalLayout->setAlignment(Qt::AlignTop);
 
 	refresh_button_list();
 }
@@ -117,7 +118,7 @@ void MainWindow::on_actionSave_triggered()
     }
 
     else if (title != current_file) // if a file is selected, and the title differs from the current filename
-    	file.rename(file_path(title)); // rename the old file, and give it the new title
+        file.rename(file_path(title)); // rename the old file, and give it the new title
 
     if (file.open(QIODevice::WriteOnly)) { // if the file opened successfully ...
         current_file = title;

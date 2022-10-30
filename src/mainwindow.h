@@ -2,7 +2,6 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QPushButton>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -15,10 +14,11 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget* parent = nullptr);
     ~MainWindow();
+
+private slots:
     void create_button(QString& name);
     void refresh_button_list();
 
-private slots:
     void on_actionSave_triggered();
     void on_actionNew_Note_triggered();
 
